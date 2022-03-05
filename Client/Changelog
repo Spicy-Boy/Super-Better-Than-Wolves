@@ -1,0 +1,194 @@
+VERSION 1.0
+Additions:
+
+-Added new tool type: blades/knives
+    >effective against webs
+    >can harvest hemp & vines
+    >deals extra damage
+-Added new tool: Flint knife
+-Added new tool: Iron knife
+-Added new progress crafting recipe: flint knapping (to produce flint knife)
+    >animated, must land hit at right moment or flint can break
+-Added recipe for crafting vine traps with two vines
+
+-Added new item: Branch 
+    >Harvested from leaves with knife, random chance drop without knife
+    >Harvested from dead bushes
+    >generates as a block on the floor of forests (hardcore fuel gathering)
+
+-Added new progress crafting recipe: leather cutting (to make cut leather)
+-Added new crafting recipes for leather armor using cut leather (for use in 2x2 grid!)
+
+-Added new cow drop: Beef rib
+-Added new food: Seared Beef Rib (by cooking a beef rib)
+-Added new progress crafting recipe: rib cutting
+-Added new item: Rib Bone (made from beef rib)
+
+-Added new tool: Bone Pickaxe (made from rib)
+
+-Added tombstone block (currently no way to craft/find it)
+-Added sunflower block (currently no way to craft it)
+    
+-Added recipe for the original workbench, crafted with 8 planks and an iron ingot
+
+-Added Hiracho's Dynamic Lighting mod, which allows torches to illuminate space even when held in hand!
+
+-Added recipe for stone hoe
+    >can be used to find hemp seeds in grass 
+    
+-Added new progress crafting recipe: bow stringing (to produce a bow without crafting table)
+
+-Added Sockthings's Sock's Crops mod (specifically, his gourds), which changes pumpkin and melon farming
+    >gourds now grow on large vines, like those in a pumpkin patch
+    >added four new pumpkin types and four new melon types
+-Added new item: pumpkin slices
+    >by using a knife on a pumpkin in the crafting grid, the player can get pumpkin slices
+    >this recipe also gives the player 4 pumpkin seeds
+    >not edible
+-Added new items: roasted and boiled pumpkin slices
+
+Changes/Tweaks:
+-Changed cows to drop at least 1 leather every time
+-Changed chickens to drop at least 2 feathers every time
+-Changed pigs to always drop 2-3 pork when killed
+-Changed sheep to always drop 2 mutton
+-Changed grass to also grow at night, fixing an issue where feeding animals with grass did not work beyond spawn chunks
+
+-Changed animal feed values to make it easier to keep animals fed
+    >Testing required!
+
+-Changed leather to render into 2 glue instead of 1 (and 1 cut leather = 1 glue) 
+-Changed pork to render into 3 tallow (instead of 1 tallow)
+-Changed a single beef to render into 1 tallow (instead of 4 beef)
+
+-Changed steel tools to be enchantable in the standard table ;P
+-Changed steel tools to now accept up to five enchantments in the infernal enchanter (go nuts!)
+-Changed diamond tools to now accept up to three enchantments in the infernal enchanter
+-Tweaked diamond tool enchanting to increase the rate of level 3 enchantments
+-Tweaked steel tool enchanting to make level 3 enchantments standard
+    >Efficiency IV is now a possibility... too OP?
+-Changed Bottles O' Enchanting to drop a lot more EXP...
+
+-Changed minecart chests to drop a chest when broken
+
+-Added Hardcore Bible Murder
+-Changed pointy sticks and sharp stone to deal small amount of damage for pretty much no reason
+
+-Changed (reduced) the HC Respawn timer to 1/4th its original value.
+
+-Changed mortared cobblestone to break into a loose cobblestone block when broken with improper tool
+
+-Added a new recipe for powered rails that only costs 2 ingots of gold
+
+-Changed items dropped on death to no longer despawn after 20 minutes
+    >instead, items dropped on death will disappear after 5 deaths 
+    
+-Changed mining charges to drop the proper chunks (and diamonds) when blasting ore
+-Changed mining charges to blast stone blocks into cobblestone
+
+-Changed starvation to take a little longer
+-Removed immediate nausea effect on starvation
+
+---
+
+Base Class Edits:
+FCBlockWeb
+FCEntityChicken
+FCEntityCow
+FCEntityPig
+FCEntitySheep
+FCRecipes
+FCBlockWaterStationary
+EnumToolMaterial
+EntityExpBottle
+FCBlockWorkbench
+EntityMinecartChest
+FCBlockGrass (fix lighting bug)
+EntityPlayer (ported from Hiracho mod)
+FCBlockHempCrop (knife harvesting)
+BlockVine (knife harvesting)
+BlockLeaves
+FCBlockLeaves
+FCItemChiselWood
+FCItemChiselStone
+FCUtilsHardcoreSpawn
+FCBlockDeadBush
+BiomeDecorator
+ItemBow (for animating flint knapping...)
+FCItemHoe
+FCBlockCobblestone
+EntityItem
+FCExplosionMining
+FoodStats 
+EntityPlayerMP (change hunger confusion effect)
+Item (change animal food values)
+FCItemStraw
+FCItemRottenFlesh
+SlotArmor (pumpkin hats fix)
+GuiIngame (NOTE: MUST BE ADDED TO SRC AFTER!!!)
+FCEntityUrn
+
+
+TRUE FINAL TODO:
+
+-Fix knife remaining in crafting window when making carving recipes
+
+-Add Death Club (rib + wood)
+
+-LANG FILE!!!!! 
+
+-Remove Time Cube
+
+-change pumpkin and goggles overlay to be less shitty
+
+
+---
+V2.0 Feature Ideas:
+-Animal hunger and food value tweak, animal taming and behaviors?
+
+-Chunkloaders
+
+-Acorns, with chance to auto-plant in grass like bloodwoods on ash? Burning propogates new growth
+>Change saplings to take a really long time to grow in general, more stages
+
+-evergreen trade for knitting and weaving recipes (the villager can do it for you)
+
+-Mining charges fix-4x3x3 radius, drop proper materials
+
+-Branches try to give random rotation
+
+-New 2nd campfire stage using torch fire particles rather than tiny fire block
+
+-Custom death message for being stabbed to death by a knife. Also, clubs if there isn't one already.
+
+-Endermen can pick up SCpumpkins and other cool blocks
+
+-Gourd types have own seeds and spawn in different places
+---
+
+
+Long term TODO: Wood widdling/carving recipes
+    > bowls, totems, 
+    
+Implement more crops
+    
+Long term TODO: chop logs in half for log slabs and siding
+
+MEGA FEATURES:
+-Chunkloading at new spawns/first campfire (or some nifty way to tell if picked a spot to settle down... maybe wet clay???)
+-Chunkloader "totem" that can change the HC Spawn Chunkloaded spot once
+
+---
+Really Crazy Ideas:
+-Make animals startle just by getting too close?
+Nah, that's lame.
+
+-Animals automatically run from mobs?
+Could be fun, maybe hard to implement.
+
+-rib cooking over campfire has custom animation where it is hanging from each stick like smoking a pig
+
+-smokable pipe!!!!
+
+Mark idea: Twigs snap under foot, making a loud snapping sound that could attract mobs
+
