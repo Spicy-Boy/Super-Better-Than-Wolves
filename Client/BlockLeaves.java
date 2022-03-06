@@ -334,9 +334,21 @@ public class BlockLeaves extends BlockLeavesBase
         
             }
             else if (par2EntityPlayer.getCurrentEquippedItem().itemID == SuperBTWDefinitions.ironBlade.itemID
-        		|| par2EntityPlayer.getCurrentEquippedItem().itemID == SuperBTWDefinitions.flintBlade.itemID)
+        		|| par2EntityPlayer.getCurrentEquippedItem().itemID == SuperBTWDefinitions.flintBlade.itemID
+        		|| par2EntityPlayer.getCurrentEquippedItem().itemID == Item.axeIron.itemID
+        		|| par2EntityPlayer.getCurrentEquippedItem().itemID == Item.axeDiamond.itemID
+        		
+            		)
             {
-            	this.dropBlockAsItem_do(par1World, par3, par4, par5, new ItemStack(SuperBTWDefinitions.branch.itemID, 1, 0));
+                if (par1World.rand.nextInt(10) == 0)
+                {
+
+                    this.dropBlockAsItem_do(par1World, par3, par4, par5, new ItemStack(Block.sapling.blockID, 1, par6 & 3));
+                }
+                else
+                {
+                	this.dropBlockAsItem_do(par1World, par3, par4, par5, new ItemStack(SuperBTWDefinitions.branch.itemID, 1, 0));
+                }
             }
         }
         else
