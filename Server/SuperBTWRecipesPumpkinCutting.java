@@ -95,8 +95,9 @@ public class SuperBTWRecipesPumpkinCutting implements IRecipe
         if ( pumpkinStack != null && bladeStack != null )
         {
             ItemStack resultStack = null;
-            SuperBTWItemBlade knifeItem = (SuperBTWItemBlade)bladeStack.getItem();
-            
+            //be careful! The code below will cause a crash if you don't find a way to make axes work too (see method: isKnife)
+            //SuperBTWItemBlade knifeItem = (SuperBTWItemBlade)bladeStack.getItem();
+
             //SOCK: commented out superiour iron knife
             
 //	        if ( knifeItem.itemID == SuperBTWDefinitions.flintBlade.itemID ) // flint
@@ -110,8 +111,8 @@ public class SuperBTWRecipesPumpkinCutting implements IRecipe
             
             //SOCK: comment the below if the above is uncommented
             
-            resultStack = new ItemStack( SCDefs.pumpkinSlice, 4 );
-            
+            resultStack = new ItemStack( SCDefs.pumpkinSlice, 2 );
+                        
         	return resultStack;
         }
         
@@ -148,7 +149,9 @@ public class SuperBTWRecipesPumpkinCutting implements IRecipe
     {
     	int iItemID = stack.itemID;
     		
-    	if ( stack.getItem() instanceof SuperBTWItemBlade )
+    	if ( stack.getItem() instanceof SuperBTWItemBlade || 
+    			stack.getItem().itemID == Item.axeIron.itemID ||
+    			stack.getItem().itemID == Item.axeDiamond.itemID)
     	{
     		return true;
     	}

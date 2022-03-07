@@ -72,7 +72,7 @@ public class FCBlockLeaves extends BlockLeaves
         if ( !world.isRemote )
         {
             
-            int iChanceOfSaplingDrop = 10;
+            int iChanceOfSaplingDrop = 12;
 
             if ( world.rand.nextInt( iChanceOfSaplingDrop ) == 0 )
             {
