@@ -31,11 +31,21 @@ public class SuperBTWRecipes extends FCRecipes {
 	public static void addBlockRecipes() {
 		AddRecipe(new ItemStack(FCBetterThanWolves.fcBlockWorkbench, 1), new Object[] // ITS BACK BABY
 		{ "###", "#X#", "###", '#', Block.planks, 'X', Item.ingotIron });
+		
+		
+		AddRecipe(new ItemStack( SuperBTWDefinitions.meatCube, 1 ),
+				new Object[] { "XXX", "XXX", "XXX", Character.valueOf('X'), FCBetterThanWolves.fcItemRawMysteryMeat});
+
+		
+		AddShapelessRecipe( new ItemStack( FCBetterThanWolves.fcItemRawMysteryMeat, 9 ), new Object[] {	    		
+	    		new ItemStack( SuperBTWDefinitions.meatCube),
+			} );
 	}
 
 	public static void addToolRecipes() {
 		FCRecipes.AddShapelessRecipe(new ItemStack(SuperBTWDefinitions.bonePickaxe, 1), new ItemStack[] {
 				new ItemStack(SuperBTWDefinitions.rib), new ItemStack(Item.silk), new ItemStack(Item.stick) });
+		
 		FCRecipes.AddShapelessRecipe(new ItemStack(SuperBTWDefinitions.bonePickaxe, 1),
 				new ItemStack[] { new ItemStack(SuperBTWDefinitions.rib),
 						new ItemStack(FCBetterThanWolves.fcItemHempFibers), new ItemStack(Item.stick) });
@@ -57,6 +67,10 @@ public class SuperBTWRecipes extends FCRecipes {
 				new Object[] { "XIS", " I ", " I ", Character.valueOf('X'), FCBetterThanWolves.fcItemStone,
 						Character.valueOf('I'), Item.stick, Character.valueOf('S'), Item.silk, });
 
+		FCRecipes.AddShapelessRecipe(new ItemStack(SuperBTWDefinitions.deathClub, 1), new ItemStack[] {
+				new ItemStack(SuperBTWDefinitions.rib), new ItemStack(SuperBTWDefinitions.rib), new ItemStack(Item.stick), new ItemStack(Item.stick) });
+	
+		
 	}
 
 	public static void addFoodRecipes() {
@@ -164,6 +178,7 @@ public class SuperBTWRecipes extends FCRecipes {
 				new Object[] { "IRI", "XYX", "IRI", Character.valueOf('X'), Item.ingotGold, Character.valueOf('I'),
 						Item.ingotIron, Character.valueOf('R'), Item.redstone, Character.valueOf('Y'), Item.stick, });
 
+		
 		// debug
 		// FCRecipes.AddShapelessRecipe(new ItemStack(SuperBTWDefinitions.branchBlock,
 		// 1), new ItemStack [] {new ItemStack(Item.diamond)} );
