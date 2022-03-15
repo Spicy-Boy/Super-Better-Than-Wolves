@@ -1,3 +1,4 @@
 # Super-Better-Than-Wolves
 
-Gearing up for the first release of SBTW. 
+The mod to end them all! SBTW adds boatloads of content and tweaks to make Better Than Wolves even more addicting.
+
