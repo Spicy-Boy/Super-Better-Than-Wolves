@@ -28,6 +28,8 @@ Additions:
 
 -Added tombstone block (currently no way to craft/find it)
 -Added sunflower block (currently no way to craft it)
+
+-Added the meat cube
     
 -Added recipe for the original workbench, crafted with 8 planks and an iron ingot
 
@@ -46,6 +48,8 @@ Additions:
     >this recipe also gives the player 4 pumpkin seeds
     >not edible
 -Added new items: roasted and boiled pumpkin slices
+
+-Added the Death Club
 
 Changes/Tweaks:
 -Changed cows to drop at least 1 leather every time
@@ -153,7 +157,7 @@ V2.0 Feature Ideas:
 
 -evergreen trade for knitting and weaving recipes (the villager can do it for you)
 
--Mining charges fix-4x3x3 radius, drop proper materials
+-Mining charges fix-4x3x3 radius
 
 -Branches try to give random rotation
 
@@ -164,6 +168,10 @@ V2.0 Feature Ideas:
 -Endermen can pick up SCpumpkins and other cool blocks
 
 -Gourd types have own seeds and spawn in different places
+
+-Right click torches to auto pick them up into inventory slot empty hand
+
+-Smokable pipe!
 ---
 
 

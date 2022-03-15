@@ -2584,6 +2584,7 @@ public abstract class EntityPlayer extends EntityLiving implements ICommandSende
 	public static final float m_fExhaustionJumping = 0.2F;
 	public static final float m_fExhaustionJumpingSprinting = 1.0F;
 	
+	
     protected void ReadModDataFromNBT( NBTTagCompound tag )
     {
 	    if ( tag.hasKey( "fcTimeOfLastSpawnAssignment" ) )

@@ -335,6 +335,7 @@ public class BlockLeaves extends BlockLeavesBase
             }
             else if (par2EntityPlayer.getCurrentEquippedItem().itemID == SuperBTWDefinitions.ironBlade.itemID
         		|| par2EntityPlayer.getCurrentEquippedItem().itemID == SuperBTWDefinitions.flintBlade.itemID
+        		|| par2EntityPlayer.getCurrentEquippedItem().itemID == Item.axeStone.itemID
         		|| par2EntityPlayer.getCurrentEquippedItem().itemID == Item.axeIron.itemID
         		|| par2EntityPlayer.getCurrentEquippedItem().itemID == Item.axeDiamond.itemID
         		

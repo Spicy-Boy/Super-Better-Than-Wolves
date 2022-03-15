@@ -38,10 +38,15 @@ public class SuperBTWItemIronBlade extends SuperBTWItemBlade
     	
         Material material = block.blockMaterial;
         
-        if ( material == Material.plants || material == Material.vine || material == Material.coral || material != Material.leaves || material != Material.pumpkin )
+        if ( material == Material.plants || material == Material.vine || material == Material.coral || material == Material.leaves || material == Material.pumpkin || material == FCBetterThanWolves.fcMaterialLog)
         {
         	return 4.5F;
         } 
+        
+//        if (block.blockID == Block.wood.blockID)
+//        {
+//        	return 4.0F;
+//        }
     	
     	return fStrength;
     }

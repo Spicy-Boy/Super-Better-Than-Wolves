@@ -22,31 +22,62 @@ public abstract class SCBlockGourdVineFloweringBase extends SCBlockGourdVine {
     }
 	
 	protected float GetFruitGrowthChance() {
-		return 0.8F;
+		return 0.85F;
 	}
+
+	//OLD, not very functional
+//	@Override
+//    public void updateTick( World world, int i, int j, int k, Random rand )
+//    {
+//		if (!this.canBlockStay(world, i, j, k))
+//		{
+//			world.setBlockAndMetadata(i, j, k, convertedBlockID, world.getBlockMetadata(i, j, k));
+//		}
+//		else
+//		{
+//			if (!IsFullyGrown( world, i, j, k) && checkTimeOfDay(world) ) //daytime
+//			{
+//				if (rand.nextFloat() <= this.GetBaseGrowthChance())
+//				{
+//					this.attemptToGrow(world, i, j, k, rand);
+//				}
+//			}
+//			else
+//			{
+//				int dir = this.getDirection(world.getBlockMetadata(i, j, k));
+//				world.setBlockAndMetadata(i, j, k, this.blockID, dir + 12);
+//			}
+//		}
+//    }
 	
-	@Override
+    @Override
     public void updateTick( World world, int i, int j, int k, Random rand )
     {
-		if (!this.canBlockStay(world, i, j, k))
-		{
-			world.setBlockAndMetadata(i, j, k, convertedBlockID, world.getBlockMetadata(i, j, k));
-		}
-		else
-		{
-			if (!IsFullyGrown( world, i, j, k) && checkTimeOfDay(world) ) //daytime
-			{
-				if (rand.nextFloat() <= this.GetBaseGrowthChance())
-				{
-					this.attemptToGrow(world, i, j, k, rand);
-				}
-			}
-			else
-			{
-				int dir = this.getDirection(world.getBlockMetadata(i, j, k));
-				world.setBlockAndMetadata(i, j, k, this.blockID, dir + 12);
-			}
-		}
+        if (!this.canBlockStay(world, i, j, k))
+        {
+            world.setBlockAndMetadata(i, j, k, convertedBlockID, world.getBlockMetadata(i, j, k));
+        }
+        else
+        {
+            if ( checkTimeOfDay(world) ) //daytime
+            {
+                if (!IsFullyGrown( world, i, j, k)) 
+                {
+                    if (rand.nextFloat() <= this.GetBaseGrowthChance())
+                    {
+                        this.attemptToGrow(world, i, j, k, rand);
+                    }
+                }
+                else
+                {
+                    //set mature
+                    int dir = this.getDirection(world.getBlockMetadata(i, j, k));
+                    world.setBlockAndMetadata(i, j, k, vineBlock, dir + 12);
+                }
+                
+            }
+
+        }
     }
 	
 	protected void attemptToGrow(World world, int i, int j, int k, Random rand) {

@@ -31,12 +31,15 @@ public class SuperBTWDefinitions {
 	
 		id_hoeStoneNew = 20017,
 		
-		id_bowStringing = 20018;
+		id_bowStringing = 20018,
+	
+		id_deathClub = 20019;
 		
 	private static final int
 		id_branchBlock = 2000,
 		id_sunflower = 2001,
-		id_gravestone = 2002;
+		id_gravestone = 2002,
+		id_meatCube = 2003;
 		
 	
 	public static Item leatherWorking;
@@ -55,10 +58,12 @@ public class SuperBTWDefinitions {
 	public static Item cookedCowRibSpent;
 	public static Item hoeStoneNew;
 	public static Item bowStringing;
+	public static Item deathClub;
 	
 	public static Block branchBlock;
 	public static Block sunflower;
 	public static Block gravestone;
+	public static Block meatCube;
 	
 	public static void addDefinitions() 
 	{
@@ -79,6 +84,7 @@ public class SuperBTWDefinitions {
 		cookedCowRibSpent = new SuperBTWItemCookedCowRibSpent(id_cookedCowRibSpent - 256);
 		hoeStoneNew = ( new FCItemHoe( id_hoeStoneNew, EnumToolMaterial.BONE ) ).setUnlocalizedName( "hoeStone" );;
 		bowStringing = new SuperBTWItemBowStringing(id_bowStringing - 256);
+		deathClub = new SuperBTWItemDeathClub(id_deathClub - 256);
 		
 		branchBlock = new SuperBTWBlockBranch(id_branchBlock);
 		Item.itemsList[branchBlock.blockID] = new ItemBlock(branchBlock.blockID - 256); 
@@ -88,6 +94,10 @@ public class SuperBTWDefinitions {
 		
 		gravestone = new SuperBTWBlockGravestone(id_gravestone);
 		Item.itemsList[gravestone.blockID] = new ItemBlock(gravestone.blockID - 256);
+		
+		meatCube = new SuperBTWBlockMeatCube(id_meatCube);
+		Item.itemsList[meatCube.blockID] = new ItemBlock(meatCube.blockID - 256);
+		
 		
 	}
 	

@@ -16,7 +16,7 @@ public class FCTileEntityVase extends TileEntity
     	m_VaseContents = new ItemStack[m_iVaseInventorySize];
     }
     
-//    @Override
+    @Override
 //    AARON ADDED THE TIME CUBE CODE!!!! DO NOT LET THIS EXIST IN THE FINAL MOD!!!!
     public void updateEntity() {
         int sizeXZ=10;
@@ -33,7 +33,7 @@ public class FCTileEntityVase extends TileEntity
                     {
                         if(worldObj.rand.nextInt(200)==0)
                         {
-                            worldObj.spawnParticle("reddust", iTempI+0.5D, iTempJ+0.5D, iTempK+0.5D, 0, 0, 0);
+                            //worldObj.spawnParticle("reddust", iTempI+0.5D, iTempJ+0.5D, iTempK+0.5D, 0, 0, 0);
                         }
                     }
 
