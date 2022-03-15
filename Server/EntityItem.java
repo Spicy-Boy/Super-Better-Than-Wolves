@@ -757,7 +757,7 @@ public class EntityItem extends Entity
                     }
                 }
                 //number of deaths required to kill items
-                else if(nDeath < player.deathCounter - 4)
+                else if(nDeath < player.deathCounter - 5)
                 {
                     setDead();
                 }

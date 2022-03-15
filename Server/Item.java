@@ -1186,6 +1186,14 @@ public class Item
         
 		return true;
 	}
+	
+    /**
+     * Called when a player right clicks an entity with an item.
+     */
+    public boolean useItemOnEntity(ItemStack par1ItemStack, EntityLiving par2EntityLiving)
+    {
+        return false;
+    }
     
     //------- Item Entity Related Functionality -------//
     

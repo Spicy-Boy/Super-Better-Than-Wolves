@@ -234,12 +234,35 @@ public class BlockLeaves extends BlockLeavesBase
      * Called when the player destroys a block with an item that can harvest it. (i, j, k) are the coordinates of the
      * block and l is the block's subtype/damage.
      */
+    //AARON changed to include blades for branch harvesting
     public void harvestBlock(World par1World, EntityPlayer par2EntityPlayer, int par3, int par4, int par5, int par6)
     {
-        if (!par1World.isRemote && par2EntityPlayer.getCurrentEquippedItem() != null && par2EntityPlayer.getCurrentEquippedItem().itemID == Item.shears.itemID)
+        if (!par1World.isRemote && par2EntityPlayer.getCurrentEquippedItem() != null )
         {
             par2EntityPlayer.addStat(StatList.mineBlockStatArray[this.blockID], 1);
-            this.dropBlockAsItem_do(par1World, par3, par4, par5, new ItemStack(Block.leaves.blockID, 1, par6 & 3));
+            if (par2EntityPlayer.getCurrentEquippedItem().itemID == Item.shears.itemID)
+            {
+            	this.dropBlockAsItem_do(par1World, par3, par4, par5, new ItemStack(Block.leaves.blockID, 1, par6 & 3));
+        
+            }
+            else if (par2EntityPlayer.getCurrentEquippedItem().itemID == SuperBTWDefinitions.ironBlade.itemID
+        		|| par2EntityPlayer.getCurrentEquippedItem().itemID == SuperBTWDefinitions.flintBlade.itemID
+        		|| par2EntityPlayer.getCurrentEquippedItem().itemID == Item.axeStone.itemID
+        		|| par2EntityPlayer.getCurrentEquippedItem().itemID == Item.axeIron.itemID
+        		|| par2EntityPlayer.getCurrentEquippedItem().itemID == Item.axeDiamond.itemID
+        		
+            		)
+            {
+                if (par1World.rand.nextInt(10) == 0)
+                {
+
+                    this.dropBlockAsItem_do(par1World, par3, par4, par5, new ItemStack(Block.sapling.blockID, 1, par6 & 3));
+                }
+                else
+                {
+                	this.dropBlockAsItem_do(par1World, par3, par4, par5, new ItemStack(SuperBTWDefinitions.branch.itemID, 1, 0));
+                }
+            }
         }
         else
         {
